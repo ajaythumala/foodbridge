@@ -1,25 +1,34 @@
 // Make an API call to retrieve food donors' details
-fetch('https://example.com/food-donors')
-  .then(response => response.json())
-  .then(data => {
+fetch('https://5ari1lmbsh.execute-api.us-east-1.amazonaws.com/dev', {
+  method: 'GET',
+  headers: {
+    'Content-Type': 'application/json'
+  }
+})
+.then(response => response.json())
+.then(data => {
+    console.log(data.body); // logs the response data from the API
+    // donations = JSON.parse(data.body);
     // Get the container element to display the details
-    const container = document.querySelector('.container');
-    
+    donations = data.body;
+    const container = document.querySelector('table');
+
     // Loop through the data and create HTML for each donor's details
-    data.forEach(donor => {
-      const html = `
+    donations.forEach(donor => {
+    const html = `
         <div class="donor">
-          <h2 class="donor-name">${donor.food_name}</h2>
-          <p class="donor-id">Donation ID: ${donor.donation_id}</p>
-          <p class="donor-description">${donor.description}</p>
-          <p class="donor-hours">Viable Hours: ${donor.viable_hours}</p>
+        <td class="donor-name">${donor.food_name}</h2>
+        <td class="donor-id">Donation ID: ${donor.donation_id}</p>
+        <td class="donor-description">${donor.description}</p>
+        <td class="donor-hours">Viable Hours: ${donor.viable_hours}</p>
         </div>
-      `;
-      // Add the HTML to the container element
-      container.insertAdjacentHTML('beforeend', html);
+    `;
+    // Add the HTML to the container element
+    container.insertAdjacentHTML('beforeend', html);
     });
-  })
-  .catch(error => {
-    // Display an error message if the API call fails
-    console.log('Error:', error);
-  });
+})
+.catch(error => {
+  console.error('Error:', error);
+});
+
+
