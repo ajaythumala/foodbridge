@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>List of My Donations</title>
+    <link rel="stylesheet" type="text/css" href="donor.css">
+  </head>
+  <body>
+    <div id="nav">
+        <h1>Donor</h1>
+        <ul>
+          <li><a href="index.html">Post Donations</a></li>
+          <li><a href="donor.html">My Donations</a></li>
+          <li>Requests</li>
+        </ul>
+      </div>
+
+    <div class="container">
+    <form id="donor-form">
+      <h1>List of My Donations</h1>
+      <label for="donor-id">Donor ID:</label>
+      <input type="text" id="donor-id" name="donor-id" required>
+      <button type="submit">Submit</button>
+    </form>
+    </div>
+    <div id="donation-list"></div>
+    <script src="donor.js"></script>
+  </body>
+</html>

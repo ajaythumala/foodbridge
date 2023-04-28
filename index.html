@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Food Donation Form</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <div id="nav">
+      <ul>
+        <li><a href="index.html">Post Donations</a></li>
+        <li><a href="donor.html">My Donations</a></li>
+        <li>Requests</li>
+      </ul>
+    </div>
+    <div class="container">
+      <h1>List a Donation</h1>
+      <form id="donation-form">
+        <label for="food-item-name">Food Item Name:</label>
+        <input type="text" id="food-item-name" name="food-item-name" required>
+        <label for="description">Description:</label>
+        <input type="text" id="description" name="description" required>
+        <label for="viable-hours">Viable Hours (Expiry):</label>
+        <input type="text" id="viable-hours" name="viable-hours" required>
+        <label for="donor-id">Donor ID:</label>
+        <input type="text" id="donor-id" name="donor-id" required>
+        <label for="donation-id">Donation ID:</label>
+        <input type="text" id="donation-id" name="donation-id" required>
+        <button type="submit" id="submit-btn">Submit</button>
+      </form>
+      <div id="confirmation-msg" class="hidden">
+        <p>Your information has been successfully submitted.</p>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,133 @@
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+#nav {
+  display: flex;
+  justify-content:space-around;
+  justify-items:center;
+  background-image: linear-gradient(to right, rgb(29, 48, 24) , #333, rgb(23, 46, 89));
+}
+
+ul {
+  display: flex;
+  padding: 0;
+  margin:50px 0;
+  color: white;
+  list-style-type: none;
+  /* gap: 20px; */
+  font-size: 16px;
+  /* border: 2px solid red; */
+
+}
+
+li {
+  /* margin: 30px; */
+  padding:10px;
+  /* border: 2px solid red; */
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 30px;
+
+}
+
+#nav h1 {
+  color: white;
+  margin: 50px 0;
+}
+
+form {
+    padding: 0;
+}
+form label {
+  font-size: 18px;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 20px;
+}
+
+form input {
+  font-size: 18px;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: #eee;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+form button[type="submit"] {
+  font-size: 18px;
+  padding: 10px 20px;
+  background-image: linear-gradient(to right, rgb(29, 48, 24) , #333, rgb(23, 46, 89));
+  color: #fff;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  
+}
+
+form button[type="submit"]:hover {
+  background-image: linear-gradient(to right, rgb(38, 100, 31) , #333, rgb(33, 66, 127));
+}
+
+#confirmation-msg {
+  background-color: #e5f5e0;
+  border: 1px solid #c3e6cb;
+  color: #155724;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Newly added CSS styles for the list of donations */
+
+#donation-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.donation-box {
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  width: 300px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.donation-box h2 {
+  margin: 0;
+}
+
+.donation-box p {
+  margin: 0;
+}
